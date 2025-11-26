@@ -9,7 +9,7 @@
     <style>
         /* Gaya Navbar */
         .navbar {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgb(249, 247, 247);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -17,7 +17,7 @@
             height: 50px;
         }
         .nav-link {
-            color: white !important;
+            color: rgb(10, 10, 10) !important;
             font-weight: 500;
             margin: 0 10px;
         }
@@ -97,6 +97,28 @@
             color: #555;
         }
 
+        /* Section Kegiatan */
+        #kegiatan {
+            padding: 100px 20px;
+            background-color: #fff;
+        }
+        .kegiatan-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .kegiatan-card:hover {
+            transform: translateY(-10px);
+        }
+        .kegiatan-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .kegiatan-card .card-body {
+            padding: 20px;
+        }
+
         /* Responsif */
         @media (max-width: 768px) {
             .about-content {
@@ -126,7 +148,7 @@
         <div class="container">
             <!-- Logo Kelas -->
             <a class="navbar-brand" href="#">
-                <img src="assets/img/Logo.png" alt="Logo Kelas"> <!-- Ganti dengan path logo Anda -->
+                <img src="assets/img/logo.png" alt="Logo Kelas"> <!-- Ganti dengan path logo Anda -->
             </a>
 
             <!-- Tombol collapse untuk mobile -->
@@ -145,6 +167,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#kegiatan">Kegiatan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeri.html">Galeri</a>
                     </li>
                 </ul>
             </div>
@@ -192,9 +217,57 @@
         </div>
     </section>
 
+    <!-- Section Kegiatan -->
+    <section id="kegiatan">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Kegiatan Kami</h2>
+                    <p style="font-size: 1.2rem; color: #666;">
+                        Berbagai kegiatan yang kami lakukan untuk mendukung pengembangan diri dan kerja sama tim.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Kegiatan 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card kegiatan-card h-100 border-0">
+                        <img src="assets/img/Sensation.jpg" class="card-img-top" alt="Kepanitiaan Sesantion">
+                        <div class="card-body">
+                            <h5 class="card-title">Kepanitiaan Sesantion</h5>
+                            <p class="card-text">Diskusi dan kolaborasi untuk memperdalam pemahaman materi Mata Kuliah.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kegiatan 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card kegiatan-card h-100 border-0">
+                        <img src="assets/img/kegiatan2.jpg" class="card-img-top" alt="Pameran Karya">
+                        <div class="card-body">
+                            <h5 class="card-title">Buka Puasa</h5>
+                            <p class="card-text">Menampilkan inovasi dan kreativitas siswa dalam bentuk proyek nyata.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kegiatan 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card kegiatan-card h-100 border-0">
+                        <img src="assets/img/kegiatan3.jpg" class="card-img-top" alt="Study Tour">
+                        <div class="card-body">
+                            <h5 class="card-title">Study Tour Edukatif</h5>
+                            <p class="card-text">Kegiatan edukasi di luar kelas untuk memperluas wawasan siswa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
 
