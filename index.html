@@ -38,13 +38,13 @@
             color: white;
         }
         .hero-title {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: bold;
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         .hero-subtitle {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin-bottom: 2rem;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
@@ -71,10 +71,44 @@
             margin-bottom: 1.5rem;
             color: #333;
         }
-        .section-text {
-            font-size: 1.2rem;
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .about-logo {
+            flex: 0 0 auto;
+        }
+        .about-logo img {
+            max-width: 150px;
+            height: auto;
+        }
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: #4e73df;
+            margin-bottom: 1rem;
+        }
+        .about-text p {
+            font-size: 1.1rem;
             line-height: 1.8;
             color: #555;
+        }
+
+        /* Responsif */
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about-logo img {
+                max-width: 100px;
+            }
+            .hero-title {
+                font-size: 2rem;
+            }
+            .hero-subtitle {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -85,7 +119,7 @@
         <div class="container">
             <!-- Logo Kelas -->
             <a class="navbar-brand" href="#">
-                <img src="assets/img/Logo.png" alt="Logo Kelas"> <!-- Ganti dengan path logo Anda -->
+                <img src="assets/img/logo.png" alt="Logo Kelas"> <!-- Ganti dengan path logo Anda -->
             </a>
 
             <!-- Tombol collapse untuk mobile -->
@@ -129,11 +163,23 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <h2 class="section-title text-center">Apa Itu Sovereigns?</h2>
-                    <p class="section-text">
-                        Sovereigns adalah sebuah komunitas atau kelas yang dibentuk untuk menciptakan generasi muda yang mandiri, kritis, dan berprestasi. 
-                        Kami percaya bahwa pendidikan tidak hanya terbatas pada ruang kelas, tetapi juga melalui kegiatan nyata, kerja sama tim, dan pengembangan diri.
-                        Dengan semangat "Menuju Generasi Cerdas, Mandiri, dan Berprestasi", Sovereigns terus berupaya memberikan kontribusi positif bagi lingkungan dan masyarakat sekitar.
-                    </p>
+                    
+                    <div class="about-content">
+                        <!-- Logo -->
+                        <div class="about-logo">
+                            <img src="assets/img/logo.png" alt="Logo Sovereigns">
+                        </div>
+
+                        <!-- Teks -->
+                        <div class="about-text">
+                            <h3>Gerakan Pendidikan Masa Depan</h3>
+                            <p>
+                                Sovereigns adalah sebuah komunitas inovatif yang dirancang untuk membentuk generasi muda yang mandiri, kritis, dan berprestasi. 
+                                Kami percaya bahwa pendidikan bukan hanya soal nilai, tetapi juga pengalaman, kerja sama, dan pengembangan diri. 
+                                Dengan semangat "Menuju Generasi Cerdas, Mandiri, dan Berprestasi", Sovereigns terus bergerak maju memberikan kontribusi positif bagi masyarakat.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -142,6 +188,4 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
-
